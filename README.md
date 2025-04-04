@@ -38,19 +38,11 @@ To visualize the robot and automatically play a behavior animation:
 ros2 launch sami_sim display.launch.py
 ```
 
-You should see **SAMI** loaded in RViz with a joint control panel on the left, and the robot will perform a behavior (e.g., RightWave or TEST etc.) using a JSON file.
+You should see **SAMI** loaded in RViz with a joint control panel on the left.
 
-The default behavior file is:
+## 3. Run the Behavior Playback
 
-```
-sami_sim/behaviors/TEST.json
-```
-
----
-
-## 3. Run the Behavior Playback Manually (Optional)
-
-> **Important:** Before running the script manually, **close** the Joint State Publisher GUI to avoid conflicts.
+> **Important:** Before running the script, **close** the Joint State Publisher GUI to avoid conflicts.
 
 Open a **new terminal**, then:
 
