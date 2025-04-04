@@ -81,7 +81,7 @@ To change which behavior file is played:
 3. Modify this line near the top:
 
 ```python
-behavior = 'YourCustomBehavior.json'
+behavior = 'TEST.json'
 ```
 
 No other changes are needed.
