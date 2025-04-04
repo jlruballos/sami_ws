@@ -15,8 +15,8 @@ install(PROGRAMS
   scripts/json_joint_publisher.py
   DESTINATION lib/${PROJECT_NAME}
 )
-install(DIRECTORY motion/
-  DESTINATION share/${PROJECT_NAME}/motion
+install(DIRECTORY behaviors/
+  DESTINATION share/${PROJECT_NAME}/behaviors
 )
 ament_package()
 

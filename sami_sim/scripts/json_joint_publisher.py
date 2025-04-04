@@ -10,6 +10,7 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 
+behavior = 'TEST.json' # Change this to the desired behavior file
 
 class RobotJointPublisher(Node):
     def __init__(self):
@@ -157,8 +158,8 @@ def main(args=None):
     package_name = 'sami_sim'
     animation_file = os.path.join(
         get_package_share_directory(package_name),
-        'motion',
-        'Concert.json' #change this to the desired animation file
+        'behaviors',
+        behavior
     )
 
     animation_thread = threading.Thread(
