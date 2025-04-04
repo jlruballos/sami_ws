@@ -38,15 +38,13 @@ To visualize the robot and automatically play a behavior animation:
 ros2 launch sami_sim display.launch.py
 ```
 
-You should see **SAMI** loaded in RViz with a joint control panel on the left, and the robot will perform a behavior (e.g., wave or concert) using a JSON file.
+You should see **SAMI** loaded in RViz with a joint control panel on the left, and the robot will perform a behavior (e.g., RightWave or TEST etc.) using a JSON file.
 
 The default behavior file is:
 
 ```
-sami_sim/behaviors/Concert.json
+sami_sim/behaviors/TEST.json
 ```
-
-This path is resolved automatically using ROS 2's package indexing via the `ament_index_python` module.
 
 ---
 
@@ -55,6 +53,10 @@ This path is resolved automatically using ROS 2's package indexing via the `amen
 > **Important:** Before running the script manually, **close** the Joint State Publisher GUI to avoid conflicts.
 
 Open a **new terminal**, then:
+
+```bash
+cd ~/sami_ws
+```
 
 ```bash
 source install/setup.bash
