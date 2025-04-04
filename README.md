@@ -68,7 +68,7 @@ Run the script directly:
 ros2 run sami_sim json_joint_publisher.py
 ```
 
-This will play the behavior file specified by the `behavior` variable inside the script (default: `Concert.json`).
+This will play the behavior file specified by the `behavior` variable inside the script (default: `TEST.json`).
 
 ---
 
