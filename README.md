@@ -4,9 +4,17 @@ This workspace allows you to simulate the **SAMI** robot in RViz and run joint a
 
 ---
 
-## 0. Navigate to the Workspace
+## 0. Initial Setup (Fresh VM)
 
-Before building or launching anything, make sure you're in your ROS 2 workspace directory:
+If you're using a clean VM with ROS 2 Jazzy, start by installing dependencies and cloning the workspace:
+
+```bash
+git clone https://github.com/jlruballos/sami_ws.git
+sudo apt install ros-jazzy-joint-state-publisher-gui
+sudo apt install ros-jazzy-xacro
+```
+
+Then:
 
 ```bash
 cd ~/sami_ws
@@ -40,6 +48,8 @@ ros2 launch sami_sim display.launch.py
 
 You should see **SAMI** loaded in RViz with a joint control panel on the left.
 
+---
+
 ## 3. Run the Behavior Playback
 
 > **Important:** Before running the script, **close** the Joint State Publisher GUI to avoid conflicts.
@@ -48,15 +58,7 @@ Open a **new terminal**, then:
 
 ```bash
 cd ~/sami_ws
-```
-
-```bash
 source install/setup.bash
-```
-
-Run the script directly:
-
-```bash
 ros2 run sami_sim json_joint_publisher.py
 ```
 
@@ -73,21 +75,28 @@ To change which behavior file is played:
 3. Modify this line near the top:
 
 ```python
-behavior = 'TEST.json'
+behavior = 'YourFile.json'
 ```
-4. Follow the steps from ## 1. Build the Workspace
+4. Rebuild your workspace and re-run the script:
+
+```bash
+colcon build
+source install/setup.bash
+ros2 run sami_sim json_joint_publisher.py
+```
 
 ---
 
 ## Summary
 
-| Task                      | Command                                                    |
-| ------------------------- | ---------------------------------------------------------- |
-| Navigate to workspace     | `cd ~/sami_ws`                                             |
-| Build workspace           | `colcon build`                                             |
-| Source environment        | `source install/setup.bash`                                |
-| Launch RViz + animation   | `ros2 launch sami_sim display.launch.py`                   |
-| Run behavior              | `ros2 run sami_sim json_joint_publisher.py`                |
-| Use custom behavior file  | Edit `behavior = 'YourFile.json'` in `json_joint_publisher.py` |
+| Task                         | Command                                                    |
+| ---------------------------- | ---------------------------------------------------------- |
+| Initial setup (fresh VM)     | `git clone ... && sudo apt install ...`                    |
+| Navigate to workspace        | `cd ~/sami_ws`                                             |
+| Build workspace              | `colcon build`                                             |
+| Source environment           | `source install/setup.bash`                                |
+| Launch RViz + robot          | `ros2 launch sami_sim display.launch.py`                   |
+| Run behavior playback        | `ros2 run sami_sim json_joint_publisher.py`                |
+| Use custom behavior file     | Edit `behavior = 'YourFile.json'` in `json_joint_publisher.py` |
 
 ---
