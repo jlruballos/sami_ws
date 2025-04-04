@@ -87,7 +87,7 @@ behavior = 'TEST.json'
 | Build workspace           | `colcon build`                                             |
 | Source environment        | `source install/setup.bash`                                |
 | Launch RViz + animation   | `ros2 launch sami_sim display.launch.py`                   |
-| Run behavior manually     | `ros2 run sami_sim json_joint_publisher.py`                |
+| Run behavior              | `ros2 run sami_sim json_joint_publisher.py`                |
 | Use custom behavior file  | Edit `behavior = 'YourFile.json'` in `json_joint_publisher.py` |
 
 ---
