@@ -75,8 +75,7 @@ To change which behavior file is played:
 ```python
 behavior = 'TEST.json'
 ```
-
-No other changes are needed.
+4. Follow the steps from ## 1. Build the Workspace
 
 ---
 
