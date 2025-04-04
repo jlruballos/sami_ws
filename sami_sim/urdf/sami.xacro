@@ -1,0 +1,1226 @@
+<?xml version="1.0" ?>
+<robot name="sami" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find sami_sim)/urdf/materials.xacro" />
+<xacro:include filename="$(find sami_sim)/urdf/sami.trans" />
+<xacro:include filename="$(find sami_sim)/urdf/sami.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.07082625526652554 -0.03194928238208809 -0.019152307850621764" rpy="0 0 0"/>
+    <mass value="0.7432940286532945"/>
+    <inertia ixx="0.000673" iyy="0.002458" izz="0.002762" ixy="0.0" iyz="1.6e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_hip_servo_1">
+  <inertial>
+    <origin xyz="0.002481291322172119 -0.005003130381428224 0.025165309780494884" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="3.7e-05" iyy="5.5e-05" izz="3.2e-05" ixy="0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.142326 0.053173 0.034835" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_hip_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.142326 0.053173 0.034835" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_hip_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_upper_leg_link_1">
+  <inertial>
+    <origin xyz="-0.012059766410574685 -0.08885860043236908 0.0028184890681623768" rpy="0 0 0"/>
+    <mass value="0.40917868648388056"/>
+    <inertia ixx="0.00143" iyy="0.000342" izz="0.001474" ixy="0.000228" iyz="9e-05" ixz="-1.7e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.114126 0.058157 3.5e-05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_upper_leg_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.114126 0.058157 3.5e-05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_upper_leg_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="spine_link_1">
+  <inertial>
+    <origin xyz="0.027489284084192933 -0.003069476744166643 0.08552595638707902" rpy="0 0 0"/>
+    <mass value="0.2835281149906091"/>
+    <inertia ixx="0.000818" iyy="0.000939" izz="0.000199" ixy="-0.0" iyz="-0.0" ixz="-5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.098076 -0.00104 0.011228" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/spine_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.098076 -0.00104 0.011228" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/spine_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="spine_connector_link_1">
+  <inertial>
+    <origin xyz="0.01675681584463798 -0.009650168483376931 0.009601085275716875" rpy="0 0 0"/>
+    <mass value="0.13622921421124207"/>
+    <inertia ixx="9.4e-05" iyy="6.9e-05" izz="5.6e-05" ixy="7e-06" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.094476 -0.00104 -0.158772" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/spine_connector_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.094476 -0.00104 -0.158772" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/spine_connector_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="chest_flat_back_link_1">
+  <inertial>
+    <origin xyz="-0.002535588326759944 -0.03199341507639908 0.045937153663593716" rpy="0 0 0"/>
+    <mass value="1.4220810862541415"/>
+    <inertia ixx="0.00109" iyy="0.003622" izz="0.003918" ixy="7e-06" iyz="-8.8e-05" ixz="-0.000155"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.072976 -0.013638 -0.158978" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/chest_flat_back_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.072976 -0.013638 -0.158978" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/chest_flat_back_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_torso_servo_1">
+  <inertial>
+    <origin xyz="0.0033397704007420703 -0.020158249013521288 -0.00014458471670808493" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="3.8e-05" iyy="3.2e-05" izz="5.5e-05" ixy="1e-06" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.144326 -0.007499 -0.205114" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_torso_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.144326 -0.007499 -0.205114" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_torso_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="neck_servo_1">
+  <inertial>
+    <origin xyz="0.00018535908888987762 -0.020400573066707867 -0.003674809220045566" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="5.5e-05" iyy="3.2e-05" izz="3.7e-05" ixy="0.0" iyz="-2e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.076851 -0.008449 -0.229897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/neck_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.076851 -0.008449 -0.229897" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/neck_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_shoulder_connector_link_1">
+  <inertial>
+    <origin xyz="-0.007429845180324246 -0.010511108225469535 0.0010300480166418047" rpy="0 0 0"/>
+    <mass value="0.08600606317174868"/>
+    <inertia ixx="4.3e-05" iyy="2.3e-05" izz="4.8e-05" ixy="0.0" iyz="-1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.163566 0.002898 -0.203894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_shoulder_connector_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.163566 0.002898 -0.203894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_shoulder_connector_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="neck_link_1">
+  <inertial>
+    <origin xyz="-0.000623902336384291 -0.00917165369898676 0.007781852659112826" rpy="0 0 0"/>
+    <mass value="0.10422527035422174"/>
+    <inertia ixx="2.7e-05" iyy="6.1e-05" izz="5.9e-05" ixy="-0.0" iyz="1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.077901 0.00258 -0.248959" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/neck_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.077901 0.00258 -0.248959" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/neck_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="neck_connector_link_1">
+  <inertial>
+    <origin xyz="-0.016959229800682825 0.00935157314333976 0.009277482772106493" rpy="0 0 0"/>
+    <mass value="0.12808373101949122"/>
+    <inertia ixx="8.8e-05" iyy="6.4e-05" izz="5.1e-05" ixy="5e-06" iyz="1e-06" ixz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.056385 0.018848 -0.276521" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/neck_connector_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.056385 0.018848 -0.276521" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/neck_connector_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_forearm_servo_1">
+  <inertial>
+    <origin xyz="0.0011637270782630382 -0.009480236123684139 -0.022695250661135286" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="5.5e-05" iyy="3.2e-05" izz="3.7e-05" ixy="-0.0" iyz="-2e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.189045 0.004112 -0.165625" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_forearm_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.189045 0.004112 -0.165625" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_forearm_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_elbow_servo_1">
+  <inertial>
+    <origin xyz="0.008701072061462867 0.0006657592443442585 -0.02676462592411734" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="3.8e-05" iyy="5.5e-05" izz="3.2e-05" ixy="0.0" iyz="1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.19604 0.01323 -0.087804" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_elbow_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.19604 0.01323 -0.087804" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_elbow_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="head_nod_servo_1">
+  <inertial>
+    <origin xyz="0.002241592612090962 -0.00018890435256134833 0.020310297331518457" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="3.8e-05" iyy="5.5e-05" izz="3.2e-05" ixy="0.0" iyz="0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.086133 0.018724 -0.264482" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/head_nod_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.086133 0.018724 -0.264482" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/head_nod_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="head_tilt_servo_1">
+  <inertial>
+    <origin xyz="0.0010946064524501448 -0.0031559280076310543 -0.020159633322107295" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="5.5e-05" iyy="3.7e-05" izz="3.2e-05" ixy="0.0" iyz="-1e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.078508 -0.018881 -0.306315" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/head_tilt_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.078508 -0.018881 -0.306315" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/head_tilt_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="chest_tilt_servo_1">
+  <inertial>
+    <origin xyz="-3.297482133166052e-06 0.003014793136348691 0.020210653495040004" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="5.5e-05" iyy="3.8e-05" izz="3.2e-05" ixy="0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.072976 0.037185 -0.147744" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/chest_tilt_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.072976 0.037185 -0.147744" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/chest_tilt_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="chest_bend_servo_1">
+  <inertial>
+    <origin xyz="-0.003345730508966388 -0.00033317739609285625 0.02015589547244806" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="3.7e-05" iyy="5.5e-05" izz="3.2e-05" ixy="-0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.063116 -0.00121 -0.148373" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/chest_bend_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.063116 -0.00121 -0.148373" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/chest_bend_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_knee_Servo_1">
+  <inertial>
+    <origin xyz="0.007226713395017487 -0.02720726124861203 -2.851864765144235e-06" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="3.8e-05" iyy="3.2e-05" izz="5.5e-05" ixy="-1e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.125812 0.202533 3.1e-05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_knee_Servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.125812 0.202533 3.1e-05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_knee_Servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_forearm_link_1">
+  <inertial>
+    <origin xyz="0.0210300559635567 -0.048396725049772694 -0.013155628399828798" rpy="0 0 0"/>
+    <mass value="0.223947903676007"/>
+    <inertia ixx="0.000414" iyy="7.1e-05" izz="0.000435" ixy="-4.1e-05" iyz="9e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.209219 0.012123 -0.049754" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_forearm_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.209219 0.012123 -0.049754" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_forearm_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_lower_leg_link_1">
+  <inertial>
+    <origin xyz="0.025576048251875816 -0.004154090144054601 -0.07206975551478847" rpy="0 0 0"/>
+    <mass value="0.36679329720363735"/>
+    <inertia ixx="0.001367" iyy="0.001362" izz="0.000241" ixy="0.0" iyz="7.2e-05" ixz="-7e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.14105 0.239822 3.1e-05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_lower_leg_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.14105 0.239822 3.1e-05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_lower_leg_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_ankle_servo_1">
+  <inertial>
+    <origin xyz="0.0072256747334668164 0.00016261363833144915 -0.027207205980904287" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="3.8e-05" iyy="5.5e-05" izz="3.2e-05" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.127528 0.240675 0.141131" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_ankle_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.127528 0.240675 0.141131" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_ankle_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_foot_link_1">
+  <inertial>
+    <origin xyz="0.024304081278909623 -0.025963497307866124 -0.02238706199927748" rpy="0 0 0"/>
+    <mass value="0.049173423820837"/>
+    <inertia ixx="8.6e-05" iyy="2.1e-05" izz="9.5e-05" ixy="-1e-06" iyz="-4e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.142761 0.24101 0.17842" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_foot_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.142761 0.24101 0.17842" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_foot_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="head_connector_link_1">
+  <inertial>
+    <origin xyz="-0.0019287750164362766 0.024568267622566607 0.036802738076112895" rpy="0 0 0"/>
+    <mass value="0.2947915476168725"/>
+    <inertia ixx="0.000226" iyy="8.9e-05" izz="0.000167" ixy="-0.0" iyz="-1e-06" ixz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.07796 0.031519 -0.295455" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/head_connector_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.07796 0.031519 -0.295455" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/head_connector_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="head_shell_1">
+  <inertial>
+    <origin xyz="-0.002539038482933534 -0.002334022382869852 -0.028845659065548757" rpy="0 0 0"/>
+    <mass value="2.5619159764134545"/>
+    <inertia ixx="0.009465" iyy="0.014004" izz="0.011474" ixy="0.000237" iyz="-0.00039" ixz="-0.000365"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.08139 0.02251 -0.358449" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/head_shell_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.08139 0.02251 -0.358449" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/head_shell_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="eye_holder_1">
+  <inertial>
+    <origin xyz="-0.00015482653848554462 -0.006635591805011318 0.002733364954545514" rpy="0 0 0"/>
+    <mass value="0.161483244889915"/>
+    <inertia ixx="6.4e-05" iyy="0.000324" izz="0.00026" ixy="0.0" iyz="1e-06" ixz="-1.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.079037 0.038808 -0.315065" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/eye_holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="led_green"/>
+  </visual>
+  <collision>
+    <origin xyz="0.079037 0.038808 -0.315065" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/eye_holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_hand_link_1">
+  <inertial>
+    <origin xyz="0.0009476458038502333 -0.02607058365007775 -0.0005324268303244228" rpy="0 0 0"/>
+    <mass value="0.31126953608135455"/>
+    <inertia ixx="0.00012" iyy="6.7e-05" izz="7.3e-05" ixy="-5e-06" iyz="-5e-06" ixz="-4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.195261 0.135603 -0.037337" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_hand_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.195261 0.135603 -0.037337" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_hand_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_hip_servo_1">
+  <inertial>
+    <origin xyz="-0.007227347582615037 -0.00500313038275578 0.025012140237310593" rpy="0 0 0"/>
+    <mass value="0.21176334631614013"/>
+    <inertia ixx="3.8e-05" iyy="5.5e-05" izz="3.2e-05" ixy="-0.0" iyz="0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.006774 0.053173 0.034835" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_hip_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.006774 0.053173 0.034835" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_hip_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_upper_leg_link_1">
+  <inertial>
+    <origin xyz="0.012059255237433964 -0.08889425305723737 0.0012672564432585549" rpy="0 0 0"/>
+    <mass value="0.40917868626135256"/>
+    <inertia ixx="0.00143" iyy="0.000339" izz="0.001477" ixy="-0.000228" iyz="7e-05" ixz="1.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.027526 0.058157 3.5e-05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_upper_leg_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.027526 0.058157 3.5e-05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_upper_leg_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_knee_servo_1">
+  <inertial>
+    <origin xyz="-0.007227224505405656 -0.02492072953971433 -0.005438464137101913" rpy="0 0 0"/>
+    <mass value="0.21176334631614013"/>
+    <inertia ixx="3.8e-05" iyy="3.2e-05" izz="5.5e-05" ixy="1e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.01584 0.205555 -0.001913" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_knee_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.01584 0.205555 -0.001913" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_knee_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_lower_leg_link_1">
+  <inertial>
+    <origin xyz="-0.025713567571044586 -0.009168487776049117 -0.07155491589889743" rpy="0 0 0"/>
+    <mass value="0.36679334835639393"/>
+    <inertia ixx="0.001367" iyy="0.001366" izz="0.000237" ixy="0.0" iyz="-6e-06" ixz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000603 0.240556 0.003699" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_lower_leg_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000603 0.240556 0.003699" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_lower_leg_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_ankle_servo_1">
+  <inertial>
+    <origin xyz="-0.007163432454704331 0.003404599940638464 -0.025297810894275963" rpy="0 0 0"/>
+    <mass value="0.21176334631614013"/>
+    <inertia ixx="3.8e-05" iyy="5.5e-05" izz="3.2e-05" ixy="0.0" iyz="-2e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.014498 0.255844 0.146353" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_ankle_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.014498 0.255844 0.146353" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_ankle_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_foot_link_1">
+  <inertial>
+    <origin xyz="-0.024350322837529567 -0.023387501485503337 -0.025021452103710207" rpy="0 0 0"/>
+    <mass value="0.049172133299005855"/>
+    <inertia ixx="8.6e-05" iyy="2.2e-05" izz="9.3e-05" ixy="1e-06" iyz="-1.2e-05" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.000778 0.25364 0.181717" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_foot_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.000778 0.25364 0.181717" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_foot_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_chest_servo_1">
+  <inertial>
+    <origin xyz="-0.004327263857634777 -0.02432517505628404 0.0043760383506855904" rpy="0 0 0"/>
+    <mass value="0.21176334631614013"/>
+    <inertia ixx="3.7e-05" iyy="3.2e-05" izz="5.5e-05" ixy="-2e-06" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.006803 -0.011678 -0.207587" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_chest_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.006803 -0.011678 -0.207587" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_chest_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_shoulder_connector_link_1">
+  <inertial>
+    <origin xyz="0.006947552371856038 -0.010733955280182358 0.0018077072548879913" rpy="0 0 0"/>
+    <mass value="0.08600611455643586"/>
+    <inertia ixx="4.3e-05" iyy="2.3e-05" izz="4.8e-05" ixy="-1e-06" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.011723 0.003586 -0.213356" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_shoulder_connector_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.011723 0.003586 -0.213356" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_shoulder_connector_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_shoulder_link_1">
+  <inertial>
+    <origin xyz="0.0004709305752363946 -0.016075719376412223 -0.01543369430071695" rpy="0 0 0"/>
+    <mass value="0.10206157321103919"/>
+    <inertia ixx="4.9e-05" iyy="4.1e-05" izz="2.5e-05" ixy="-0.0" iyz="-0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.039513 -0.009052 -0.215178" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_shoulder_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.039513 -0.009052 -0.215178" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_shoulder_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_shoulder_servo_1">
+  <inertial>
+    <origin xyz="-0.0035798988081991584 0.004825359565664773 -0.02436135951174881" rpy="0 0 0"/>
+    <mass value="0.21176334631614013"/>
+    <inertia ixx="5.5e-05" iyy="3.7e-05" izz="3.2e-05" ixy="-0.0" iyz="2e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.04303 0.022448 -0.229589" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_shoulder_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.04303 0.022448 -0.229589" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_shoulder_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_forearm_servo_1">
+  <inertial>
+    <origin xyz="0.0010328108945922287 -0.00896723931300785 -0.02290883550499237" rpy="0 0 0"/>
+    <mass value="0.21176334631614013"/>
+    <inertia ixx="5.5e-05" iyy="3.2e-05" izz="3.7e-05" ixy="-0.0" iyz="-2e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.041158 0.00414 -0.178761" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_forearm_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.041158 0.00414 -0.178761" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_forearm_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_upper_arm_link_1">
+  <inertial>
+    <origin xyz="-0.0030861081925343606 0.021109782404801 -0.02472041463782676" rpy="0 0 0"/>
+    <mass value="0.2528063544081857"/>
+    <inertia ixx="0.000322" iyy="0.000295" izz="0.000141" ixy="-3e-06" iyz="3.3e-05" ixz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.046453 0.038467 -0.158933" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_upper_arm_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.046453 0.038467 -0.158933" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_upper_arm_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_elbow_servo_1">
+  <inertial>
+    <origin xyz="-0.005935460143811917 -0.0035997531083869763 -0.025585713158893186" rpy="0 0 0"/>
+    <mass value="0.21176334631614013"/>
+    <inertia ixx="3.7e-05" iyy="5.5e-05" izz="3.2e-05" ixy="0.0" iyz="1e-06" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.056536 0.006748 -0.099885" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_elbow_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.056536 0.006748 -0.099885" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_elbow_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_forearm_link_1">
+  <inertial>
+    <origin xyz="-0.02038737150885951 -0.041686555536646144 -0.028357123170983267" rpy="0 0 0"/>
+    <mass value="0.2239481878604043"/>
+    <inertia ixx="0.000416" iyy="9.2e-05" izz="0.000413" ixy="3.2e-05" iyz="-8.7e-05" ixz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.073582 0.010372 -0.06546" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_forearm_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.073582 0.010372 -0.06546" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_forearm_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_shoulder_servo_1">
+  <inertial>
+    <origin xyz="0.0006710703166474541 0.022927314816553954 -0.008954085138101892" rpy="0 0 0"/>
+    <mass value="0.21176334532421678"/>
+    <inertia ixx="5.5e-05" iyy="3.7e-05" izz="3.2e-05" ixy="-0.0" iyz="2e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.191312 0.039928 -0.201347" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_shoulder_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.191312 0.039928 -0.201347" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_shoulder_servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_shoulder_link_1">
+  <inertial>
+    <origin xyz="0.006747272366916385 0.014606767558301125 -0.029647607415213106" rpy="0 0 0"/>
+    <mass value="0.1020615316178321"/>
+    <inertia ixx="4.9e-05" iyy="4.1e-05" izz="2.5e-05" ixy="-0.0" iyz="-1e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.196987 0.021132 -0.216314" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_shoulder_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.196987 0.021132 -0.216314" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_shoulder_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_upper_arm_link_1">
+  <inertial>
+    <origin xyz="0.006414022054376578 0.02040941658318538 -0.02466792977782424" rpy="0 0 0"/>
+    <mass value="0.2528063543948451"/>
+    <inertia ixx="0.000322" iyy="0.000296" izz="0.000139" ixy="-2e-06" iyz="2.9e-05" ixz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.19326 0.038733 -0.146051" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_upper_arm_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_anodized_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="0.19326 0.038733 -0.146051" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/right_upper_arm_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_hand_link_1">
+  <inertial>
+    <origin xyz="-0.0014115590933047387 -0.024811053882916698 -0.00795533169549613" rpy="0 0 0"/>
+    <mass value="0.31126953608135455"/>
+    <inertia ixx="0.000119" iyy="7e-05" izz="7.2e-05" ixy="1e-06" iyz="-6e-06" ixz="1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.058607 0.124648 -0.017367" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_hand_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.058607 0.124648 -0.017367" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sami_sim/meshes/left_hand_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 1" type="fixed">
+  <origin xyz="-0.142326 -0.053173 -0.034835" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_hip_servo_1"/>
+</joint>
+
+<joint name="RightHip" type="revolute">
+  <origin xyz="-0.114126 -0.058157 -3.5e-05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_upper_leg_link_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+  <limit upper="6.283185" lower="4.18879" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="-0.098076 0.00104 -0.011228" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="spine_link_1"/>
+</joint>
+
+<joint name="TorsoBow" type="revolute">
+  <origin xyz="0.0036 0.0 0.17" rpy="0 0 0"/>
+  <parent link="spine_link_1"/>
+  <child link="spine_connector_link_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+  <limit upper="6.283185" lower="4.18879" effort="100" velocity="100"/>
+</joint>
+
+<joint name="TorsoTilt" type="continuous">
+  <origin xyz="0.0215 0.012598 0.000206" rpy="0 0 0"/>
+  <parent link="spine_connector_link_1"/>
+  <child link="chest_flat_back_link_1"/>
+  <axis xyz="-0.0 -0.999866 -0.016383"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="-0.07135 -0.006139 0.046136" rpy="0 0 0"/>
+  <parent link="chest_flat_back_link_1"/>
+  <child link="right_torso_servo_1"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="-0.003875 -0.005189 0.070919" rpy="0 0 0"/>
+  <parent link="chest_flat_back_link_1"/>
+  <child link="neck_servo_1"/>
+</joint>
+
+<joint name="RightChest" type="revolute">
+  <origin xyz="-0.01924 -0.010397 -0.00122" rpy="0 0 0"/>
+  <parent link="right_torso_servo_1"/>
+  <child link="right_shoulder_connector_link_1"/>
+  <axis xyz="-0.99849 0.007873 -0.05437"/>
+  <limit upper="6.283185" lower="4.18879" effort="100" velocity="100"/>
+</joint>
+
+<joint name="HeadTurn" type="revolute">
+  <origin xyz="-0.00105 -0.011029 0.019062" rpy="0 0 0"/>
+  <parent link="neck_servo_1"/>
+  <child link="neck_link_1"/>
+  <axis xyz="-0.054492 -0.009378 0.99847"/>
+  <limit upper="2.792527" lower="1.22173" effort="100" velocity="100"/>
+</joint>
+
+<joint name="HeadNod" type="revolute">
+  <origin xyz="0.021516 -0.016268 0.027562" rpy="0 0 0"/>
+  <parent link="neck_link_1"/>
+  <child link="neck_connector_link_1"/>
+  <axis xyz="0.998514 -0.000893 0.054486"/>
+  <limit upper="2.70526" lower="1.919862" effort="100" velocity="100"/>
+</joint>
+
+<joint name="RightBicep" type="revolute">
+  <origin xyz="0.007942 0.01702 -0.050689" rpy="0 0 0"/>
+  <parent link="right_shoulder_link_1"/>
+  <child link="right_forearm_servo_1"/>
+  <axis xyz="-0.054407 -0.004581 0.998508"/>
+  <limit upper="6.283185" lower="4.18879" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 14" type="fixed">
+  <origin xyz="-0.00278 0.025503 -0.058247" rpy="0 0 0"/>
+  <parent link="right_upper_arm_link_1"/>
+  <child link="right_elbow_servo_1"/>
+</joint>
+
+<joint name="Rigid 16" type="fixed">
+  <origin xyz="-0.029748 0.000124 -0.012039" rpy="0 0 0"/>
+  <parent link="neck_connector_link_1"/>
+  <child link="head_nod_servo_1"/>
+</joint>
+
+<joint name="Rigid 17" type="fixed">
+  <origin xyz="-0.022123 0.037729 0.029794" rpy="0 0 0"/>
+  <parent link="neck_connector_link_1"/>
+  <child link="head_tilt_servo_1"/>
+</joint>
+
+<joint name="Rigid 18" type="fixed">
+  <origin xyz="0.0215 -0.038225 -0.011028" rpy="0 0 0"/>
+  <parent link="spine_connector_link_1"/>
+  <child link="chest_tilt_servo_1"/>
+</joint>
+
+<joint name="Rigid 19" type="fixed">
+  <origin xyz="0.03136 0.00017 -0.010399" rpy="0 0 0"/>
+  <parent link="spine_connector_link_1"/>
+  <child link="chest_bend_servo_1"/>
+</joint>
+
+<joint name="Rigid 20" type="fixed">
+  <origin xyz="-0.011686 -0.144376 4e-06" rpy="0 0 0"/>
+  <parent link="right_upper_leg_link_1"/>
+  <child link="right_knee_Servo_1"/>
+</joint>
+
+<joint name="RightElbow" type="revolute">
+  <origin xyz="-0.013179 0.001107 -0.03805" rpy="0 0 0"/>
+  <parent link="right_elbow_servo_1"/>
+  <child link="right_forearm_link_1"/>
+  <axis xyz="-0.997045 0.008454 -0.07635"/>
+  <limit upper="1.396263" lower="-2.094395" effort="100" velocity="100"/>
+</joint>
+
+<joint name="RightKnee" type="revolute">
+  <origin xyz="-0.015238 -0.037289 0.0" rpy="0 0 0"/>
+  <parent link="right_knee_Servo_1"/>
+  <child link="right_lower_leg_link_1"/>
+  <axis xyz="-0.999757 -0.022034 -0.0"/>
+  <limit upper="1.570796" lower="-0.872665" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 24" type="fixed">
+  <origin xyz="0.013522 -0.000853 -0.1411" rpy="0 0 0"/>
+  <parent link="right_lower_leg_link_1"/>
+  <child link="right_ankle_servo_1"/>
+</joint>
+
+<joint name="RightAnkle" type="revolute">
+  <origin xyz="-0.015233 -0.000335 -0.037289" rpy="0 0 0"/>
+  <parent link="right_ankle_servo_1"/>
+  <child link="right_foot_link_1"/>
+  <axis xyz="0.999515 0.022029 0.022034"/>
+  <limit upper="0.872665" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="HeadTilt" type="revolute">
+  <origin xyz="-0.021575 -0.012671 0.018934" rpy="0 0 0"/>
+  <parent link="neck_connector_link_1"/>
+  <child link="head_connector_link_1"/>
+  <axis xyz="0.00038 0.999956 0.009412"/>
+  <limit upper="2.530727" lower="1.745329" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 28" type="fixed">
+  <origin xyz="-0.00343 0.009009 0.062994" rpy="0 0 0"/>
+  <parent link="head_connector_link_1"/>
+  <child link="head_shell_1"/>
+</joint>
+
+<joint name="Rigid 29" type="fixed">
+  <origin xyz="-0.001077 -0.007289 0.01961" rpy="0 0 0"/>
+  <parent link="head_connector_link_1"/>
+  <child link="eye_holder_1"/>
+</joint>
+
+<joint name="Rigid 30" type="fixed">
+  <origin xyz="0.013958 -0.12348 -0.012417" rpy="0 0 0"/>
+  <parent link="right_forearm_link_1"/>
+  <child link="right_hand_link_1"/>
+</joint>
+
+<joint name="Rigid 31" type="fixed">
+  <origin xyz="0.006774 -0.053173 -0.034835" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_hip_servo_1"/>
+</joint>
+
+<joint name="LeftHip" type="revolute">
+  <origin xyz="-0.027526 -0.058157 -3.5e-05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_upper_leg_link_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.675516" lower="0.174533" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 33" type="fixed">
+  <origin xyz="0.011686 -0.147398 0.001948" rpy="0 0 0"/>
+  <parent link="left_upper_leg_link_1"/>
+  <child link="left_knee_servo_1"/>
+</joint>
+
+<joint name="LeftKnee" type="revolute">
+  <origin xyz="0.015237 -0.035001 -0.005612" rpy="0 0 0"/>
+  <parent link="left_knee_servo_1"/>
+  <child link="left_lower_leg_link_1"/>
+  <axis xyz="0.999757 -0.022031 -0.000385"/>
+  <limit upper="1.48353" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 35" type="fixed">
+  <origin xyz="-0.013895 -0.015288 -0.142654" rpy="0 0 0"/>
+  <parent link="left_lower_leg_link_1"/>
+  <child link="left_ankle_servo_1"/>
+</joint>
+
+<joint name="LeftAnkle" type="revolute">
+  <origin xyz="0.015276 0.002204 -0.035364" rpy="0 0 0"/>
+  <parent link="left_ankle_servo_1"/>
+  <child link="left_foot_link_1"/>
+  <axis xyz="-0.999472 0.023562 0.022365"/>
+  <limit upper="2.094395" lower="0.959931" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 37" type="fixed">
+  <origin xyz="0.066173 -0.00196 0.048609" rpy="0 0 0"/>
+  <parent link="chest_flat_back_link_1"/>
+  <child link="left_chest_servo_1"/>
+</joint>
+
+<joint name="LeftChest" type="revolute">
+  <origin xyz="0.018526 -0.015264 0.005769" rpy="0 0 0"/>
+  <parent link="left_chest_servo_1"/>
+  <child link="left_shoulder_connector_link_1"/>
+  <axis xyz="-0.998272 0.022923 -0.054112"/>
+  <limit upper="3.141593" lower="0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="LeftShoulder" type="revolute">
+  <origin xyz="0.02779 0.012638 0.001822" rpy="0 0 0"/>
+  <parent link="left_shoulder_connector_link_1"/>
+  <child link="left_shoulder_link_1"/>
+  <axis xyz="-0.021423 -0.999374 -0.02814"/>
+  <limit upper="3.141593" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 40" type="fixed">
+  <origin xyz="0.003517 -0.0315 0.014411" rpy="0 0 0"/>
+  <parent link="left_shoulder_link_1"/>
+  <child link="left_shoulder_servo_1"/>
+</joint>
+
+<joint name="LeftBicep" type="revolute">
+  <origin xyz="0.001645 -0.013192 -0.036417" rpy="0 0 0"/>
+  <parent link="left_shoulder_link_1"/>
+  <child link="left_forearm_servo_1"/>
+  <axis xyz="0.054723 0.026932 -0.998138"/>
+  <limit upper="3.141593" lower="0.349066" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 42" type="fixed">
+  <origin xyz="0.005295 -0.034327 -0.019828" rpy="0 0 0"/>
+  <parent link="left_forearm_servo_1"/>
+  <child link="left_upper_arm_link_1"/>
+</joint>
+
+<joint name="Rigid 43" type="fixed">
+  <origin xyz="0.010083 0.031719 -0.059048" rpy="0 0 0"/>
+  <parent link="left_upper_arm_link_1"/>
+  <child link="left_elbow_servo_1"/>
+</joint>
+
+<joint name="LeftElbow" type="revolute">
+  <origin xyz="0.017046 -0.003624 -0.034425" rpy="0 0 0"/>
+  <parent link="left_elbow_servo_1"/>
+  <child link="left_forearm_link_1"/>
+  <axis xyz="-0.999245 0.021839 -0.032125"/>
+  <limit upper="3.141593" lower="1.047198" effort="100" velocity="100"/>
+</joint>
+
+<joint name="RightShoulder" type="revolute">
+  <origin xyz="-0.027746 -0.03703 -0.002547" rpy="0 0 0"/>
+  <parent link="right_shoulder_connector_link_1"/>
+  <child link="right_shoulder_servo_1"/>
+  <axis xyz="-0.006412 -0.999615 -0.027003"/>
+  <limit upper="6.283185" lower="3.141593" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 46" type="fixed">
+  <origin xyz="-0.005675 0.018796 0.014967" rpy="0 0 0"/>
+  <parent link="right_shoulder_servo_1"/>
+  <child link="right_shoulder_link_1"/>
+</joint>
+
+<joint name="Rigid 47" type="fixed">
+  <origin xyz="-0.004215 -0.034621 -0.019574" rpy="0 0 0"/>
+  <parent link="right_forearm_servo_1"/>
+  <child link="right_upper_arm_link_1"/>
+</joint>
+
+<joint name="Rigid 48" type="fixed">
+  <origin xyz="-0.014975 -0.114276 -0.048093" rpy="0 0 0"/>
+  <parent link="left_forearm_link_1"/>
+  <child link="left_hand_link_1"/>
+</joint>
+
+</robot>

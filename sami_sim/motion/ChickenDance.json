@@ -1,0 +1,171 @@
+{
+    "Name": "ChickenDance",
+    "Keyframes": [
+        {
+            "HasEmote": "False",
+            "HasAudio": "False",
+            "HasJoints": "True",
+            "WaitTime": 800,
+            "JointAngles": [
+                {
+                    "Joint": "RightShoulder",
+                    "Angle": 145
+                },
+                {
+                    "Joint": "LeftShoulder",
+                    "Angle": 130
+                },
+                {
+                    "Joint": "RightElbow",
+                    "Angle": 130
+                },
+                {
+                    "Joint": "LeftElbow",
+                    "Angle": 50
+                }
+            ]
+        },
+        {
+            "HasEmote": "False",
+            "HasAudio": "False",
+            "HasJoints": "True",
+            "WaitTime": 800,
+            "JointAngles": [
+                {
+                    "Joint": "RightShoulder",
+                    "Angle": 145
+                },
+                {
+                    "Joint": "LeftShoulder",
+                    "Angle": 130
+                }
+            ]
+        },
+        {
+            "HasEmote": "False",
+            "HasAudio": "False",
+            "HasJoints": "True",
+            "WaitTime": 800,
+            "JointAngles": [
+                {
+                    "Joint": "RightShoulder",
+                    "Angle": 85
+                },
+                {
+                    "Joint": "LeftShoulder",
+                    "Angle": 180
+                }
+            ]
+        },
+        {
+            "HasEmote": "False",
+            "HasAudio": "False",
+            "HasJoints": "True",
+            "WaitTime": 800,
+            "JointAngles": [
+                {
+                    "Joint": "RightShoulder",
+                    "Angle": 145
+                },
+                {
+                    "Joint": "LeftShoulder",
+                    "Angle": 130
+                }
+            ]
+        },
+
+        {
+            "HasEmote": "False",
+            "HasAudio": "False",
+            "HasJoints": "True",
+            "WaitTime": 800,
+            "JointAngles": [
+                {
+                    "Joint": "RightShoulder",
+                    "Angle": 85
+                },
+                {
+                    "Joint": "LeftShoulder",
+                    "Angle": 180
+                }
+            ]
+        },
+
+        {
+            "HasEmote": "False",
+            "HasAudio": "False",
+            "HasJoints": "True",
+            "WaitTime": 800,
+            "JointAngles": [
+                {
+                    "Joint": "RightShoulder",
+                    "Angle": 145
+                },
+                {
+                    "Joint": "LeftShoulder",
+                    "Angle": 130
+                }
+            ]
+        },
+
+        {
+            "HasEmote": "False",
+            "HasAudio": "False",
+            "HasJoints": "True",
+            "WaitTime": 800,
+            "JointAngles": [
+                {
+                    "Joint": "RightShoulder",
+                    "Angle": 85
+                },
+                {
+                    "Joint": "LeftShoulder",
+                    "Angle": 180
+                }
+            ]
+        },
+
+        {
+            "HasEmote": "False",
+            "HasAudio": "False",
+            "HasJoints": "True",
+            "WaitTime": 800,
+            "JointAngles": [
+                {
+                    "Joint": "RightShoulder",
+                    "Angle": 145
+                },
+                {
+                    "Joint": "LeftShoulder",
+                    "Angle": 130
+                }
+            ]
+        },
+
+
+        {
+            "HasEmote": "False",
+            "HasAudio": "False",
+            "HasJoints": "True",
+            "WaitTime": 800,
+            "JointAngles": [
+                {
+                    "Joint": "RightShoulder",
+                    "Angle": 85
+                },
+                {
+                    "Joint": "LeftShoulder",
+                    "Angle": 180
+                },
+                {
+                    "Joint": "RightElbow",
+                    "Angle": 90
+                },
+                {
+                    "Joint": "LeftElbow",
+                    "Angle": 105
+                }
+            ]
+        }
+    ]
+}
