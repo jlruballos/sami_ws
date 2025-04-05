@@ -4,7 +4,7 @@ This workspace allows you to simulate the **SAMI** robot in RViz and run joint a
 
 ---
 
-## 0. Initial Setup (Fresh VM)
+## 0. Initial Setup
 
 If you're using a clean VM with ROS 2 Jazzy, start by installing dependencies and cloning the workspace:
 
