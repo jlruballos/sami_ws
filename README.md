@@ -40,7 +40,7 @@ source install/setup.bash
 
 ## 2. Launch the SAMI Robot in RViz
 
-To visualize the robot and automatically play a behavior animation:
+To visualize the robot:
 
 ```bash
 ros2 launch sami_sim display.launch.py
@@ -75,7 +75,7 @@ To change which behavior file is played:
 3. Modify this line near the top:
 
 ```python
-behavior = 'YourFile.json'
+behavior = 'TEST.json'
 ```
 4. Rebuild your workspace and re-run the script:
 
