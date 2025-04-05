@@ -91,7 +91,7 @@ ros2 run sami_sim json_joint_publisher.py
 
 | Task                         | Command                                                    |
 | ---------------------------- | ---------------------------------------------------------- |
-| Initial setup (fresh VM)     | `git clone ... && sudo apt install ...`                    |
+| Initial setup (new VM)       | `git clone ... && sudo apt install ...`                    |
 | Navigate to workspace        | `cd ~/sami_ws`                                             |
 | Build workspace              | `colcon build`                                             |
 | Source environment           | `source install/setup.bash`                                |
