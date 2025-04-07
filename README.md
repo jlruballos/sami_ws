@@ -100,3 +100,37 @@ ros2 run sami_sim json_joint_publisher.py
 | Use custom behavior file     | Edit `behavior = 'YourFile.json'` in `json_joint_publisher.py` |
 
 ---
+
+# Robot Joint Configuration
+
+## Joint Table
+
+| **Joint Name**     | **Joint ID** | **Home Angle** | **Home Min Angle** | **Home Max Angle** | **Min Angle** | **Max Angle** | **Positive Direction** |
+|--------------------|--------------|----------------|---------------------|---------------------|---------------|---------------|-------------------------|
+| **Left Side**       |              |                |                     |                     |               |               |                         |
+| LeftChest          | 8            | 115            | 30                  | 180                 | 0             | 180           | CCW                     |
+| LeftShoulder       | 9            | 180            | 30                  | 195                 | 0             | 195           | CW                      |
+| LeftBicep          | 10           | 115            | 20                  | 180                 | 0             | 180           | CCW                     |
+| LeftElbow          | 11           | 105            | 60                  | 180                 | 0             | 180           | CCW                     |
+| LeftGripper        | 21           | 15             |                     |                     |               |               |                         |
+| LeftHip            | 15           | 96             | 10                  | 96                  | 10            | 196           | CCW                     |
+| LeftKnee           | 16           | 80             | 0                   | 85                  | 0             | 180           | CCW                     |
+| LeftAnkle          | 17           | 90             | 55                  | 120                 | 50            | 120           | CCW                     |
+| **Right Side**      |              |                |                     |                     |               |               |                         |
+| RightChest         | 4            | 135            | 60                  | 180                 | 0             | 180           | CCW                     |
+| RightShoulder      | 5            | 85             | 70                  | 240                 | 0             | 240           | CW                      |
+| RightBicep         | 6            | 115            | 115                 | 180                 | 0             | 180           | CW                      |
+| RightElbow         | 7            | 90             | 20                  | 155                 | 0             | 180           | CW                      |
+| RightGripper       | 20           | 15             |                     |                     |               |               |                         |
+| RightHip           | 13           | 84             | 84                  | 170                 | 84            | 170           | CCW                     |
+| RightKnee          | 14           | 90             | 90                  | 180                 | 0             | 180           | CCW                     |
+| RightAnkle         | 15           | 80             | 50                  | 120                 | 50            | 120           | CCW                     |
+| **Head**            |              |                |                     |                     |               |               |                         |
+| HeadNod            | 2            | 125            | 110                 | 155                 | 110           | 155           | CCW                     |
+| HeadTurn           | 3            | 120            | 70                  | 160                 | 70            | 160           | CCW                     |
+| HeadTilt           | 1            | 125            | 100                 | 145                 | 100           | 145           | CCW                     |
+| **Torso**           |              |                |                     |                     |               |               |                         |
+| TorsoBow           | 19           | 125            | 100                 | 150                 | 100           | 150           | CW                      |
+| TorsoTilt          | 18           | 115            | 80                  | 160                 | 80            | 160           | CCW                     |
+
+> **Note:** Angles are in degrees. Empty fields indicates information still needs to be tested. Please be careful when applying these limits errors/typos are possible. If any errors are found please let us know, 
