@@ -10,12 +10,15 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 
-behavior = 'TEST.json' # Change this to the desired behavior file
+package_name = 'sami_sim'
 
 class RobotJointPublisher(Node):
     def __init__(self):
         super().__init__('robot_joint_publisher')
         self.publisher = self.create_publisher(JointState, '/joint_states', 10)
+
+        # Parameter declaration
+        self.declare_parameter('behavior_file', 'TEST.json')
 
         # Define all joints in the robot from XACRO
         self.joint_positions = {
@@ -125,7 +128,21 @@ class RobotJointPublisher(Node):
         for thread in threads:
             thread.join()
 
-    def execute_animation(self, animation_file):
+    def execute_animation(self, animation_file=None):
+
+        # If no animation file was provided, parse from parameters
+        if animation_file is None:
+            behavior = self.get_parameter('behavior_file').get_parameter_value().string_value
+            
+            if ".json" not in behavior:
+                behavior += ".json"
+
+            animation_file = os.path.join(
+                get_package_share_directory(package_name),
+                'behaviors',
+                behavior
+            )
+
         try:
             with open(animation_file, 'r') as f:
                 animation_data = json.load(f)
@@ -155,16 +172,9 @@ def main(args=None):
     rclpy.init(args=args)
     publisher = RobotJointPublisher()
 
-    package_name = 'sami_sim'
-    animation_file = os.path.join(
-        get_package_share_directory(package_name),
-        'behaviors',
-        behavior
-    )
-
     animation_thread = threading.Thread(
         target=publisher.execute_animation,
-        args=(animation_file,),
+        args=(),
         daemon=True
     )
     animation_thread.start()
@@ -179,3 +189,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
