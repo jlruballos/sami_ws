@@ -18,7 +18,7 @@ class RobotJointPublisher(Node):
         self.publisher = self.create_publisher(JointState, '/joint_states', 10)
 
         # Parameter declaration
-        self.declare_parameter('behavior', 'TEST.json')
+        self.declare_parameter('behavior_file', 'TEST.json')
 
         # Define all joints in the robot from XACRO
         self.joint_positions = {
@@ -132,7 +132,7 @@ class RobotJointPublisher(Node):
 
         # If no animation file was provided, parse from parameters
         if animation_file is None:
-            behavior = self.get_parameter('behavior').get_parameter_value().string_value
+            behavior = self.get_parameter('behavior_file').get_parameter_value().string_value
             
             if ".json" not in behavior:
                 behavior += ".json"
