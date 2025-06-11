@@ -28,13 +28,13 @@ class RobotJointPublisher(Node):
 
         # Joint direction multipliers (1 = normal, -1 = inverted)
         self.joint_directions = {
-            "RightChest": -1,
+            "RightChest": 1,
             "RightShoulder": -1,
             "RightBicep": -1,
             "RightElbow": 1,
             "RightKnee": 1,
             "RightAnkle": -1,
-            "LeftChest": 1,
+            "LeftChest": -1,
             "LeftShoulder": -1,
             "LeftBicep": 1,
             "LeftElbow": -1,
